@@ -4,6 +4,8 @@ import './index.css';
 import App from './components/App/App.js';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { takeEvery, call, put as dispatch } from 'redux-saga/effects';
+import axios from 'axios';
 // Provider allows us to use redux within our react app
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
@@ -12,12 +14,27 @@ import createSagaMiddleware from 'redux-saga';
 
 // Create the rootSaga generator function
 function* rootSaga() {
-
+yield takeEvery('FETCH_PROJECTS', fetchProjects);
+yield takeEvery('FETCH_TAGS', fetchTags)
 }
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
+//sagas
+function* fetchProjects(){
+    const projectList = yield call(axios.get,'/projects');
+    yield dispatch({ type : 'SET_PROJECTS', payload: projectList.data })
+}
+
+function* fetchTags(){
+    const tagList = yield call(axios.get, '/tags');
+    yield dispatch({ type : 'SET_TAGS', payload: tagList.data})
+}
+
+//end sagas
+
+//reducers
 // Used to store projects returned from the server
 const projects = (state = [], action) => {
     switch (action.type) {
@@ -37,7 +54,7 @@ const tags = (state = [], action) => {
             return state;
     }
 }
-
+//end reducers
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
