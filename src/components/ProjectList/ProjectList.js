@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-class ProjectList extends Component {
+import ProjectItem from '../ProjectItem/ProjectItem'
+class ProjectList extends Component { 
     componentDidMount() {
         this.getProjects();
         this.getTags();
@@ -19,10 +19,15 @@ class ProjectList extends Component {
     render() {
       return (
         <div>
-          <p>ProjectList Page</p>
-          {JSON.stringify(this.props.reduxStore.projects)}
+          <p id="title">Weekend Project Showcase</p>
+          {this.props.reduxStore.projects.map((eachItem)=>{
+              return(
+                  <ProjectItem key={eachItem.id} name={eachItem.name} description={eachItem.description} thumbnail={eachItem.thumbnail} website={eachItem.website} github={eachItem.github} date_completed={eachItem.date_completed} tag_id={eachItem.tag_id}/>
+              )
+          })}
+          {/* {JSON.stringify(this.props.reduxStore.projects)} */}
           <hr></hr>
-          {JSON.stringify(this.props.reduxStore.tags)}
+          {/* {JSON.stringify(this.props.reduxStore.tags)} */}
 
         </div>
       );

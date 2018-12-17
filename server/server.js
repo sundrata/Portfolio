@@ -10,11 +10,11 @@ app.use(express.static('build'));
 /** ---------- ROUTE CALLS ---------- **/
 const projectsRouter = require('./routes/projects.router')
 const tagsRouter = require('./routes/tags.router')
-
+const adminRouter = require('./routes/admin.router')
 /** ---------- ROUTES ---------- **/
 app.use('/projects', projectsRouter);
 app.use('/tags', tagsRouter)
-
+app.use('/admin', adminRouter)
 /** ---------- START SERVER ---------- **/
 const port = process.env.PORT || 5000;
 app.listen(port, function () {

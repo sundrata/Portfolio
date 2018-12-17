@@ -2,8 +2,8 @@ const express = require('express');
 const pool = require('../modules/pool')
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    // return all projects
+router.get('/admin', (req, res) => {
+    // return
     const queryText = `SELECT * FROM projects ORDER BY id ASC`;
     pool.query(queryText)
         .then( (result) => {
