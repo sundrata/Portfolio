@@ -22,7 +22,7 @@ class ProjectList extends Component {
           <p id="title">Weekend Project Showcase</p>
           {this.props.reduxStore.projects.map((eachItem)=>{
               return(
-                  <ProjectItem key={eachItem.id} name={eachItem.name} description={eachItem.description} thumbnail={eachItem.thumbnail} website={eachItem.website} github={eachItem.github} date_completed={eachItem.date_completed} tag_id={eachItem.tag_id}/>
+                  <ProjectItem key={eachItem.id} name={eachItem.name} description={eachItem.description} thumbnail={eachItem.thumbnail} website={eachItem.website} github={eachItem.github} date_completed={eachItem.date_completed} tag_name={eachItem.tag_name}/>
               )
           })}
           {/* {JSON.stringify(this.props.reduxStore.projects)} */}

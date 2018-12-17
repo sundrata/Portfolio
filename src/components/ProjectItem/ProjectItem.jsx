@@ -60,12 +60,12 @@ class ProjectItem extends Component {
         }
 
         // // tag_id conditional
-        // let tagDisplay;
-        // if (this.props.name) {
-        //     tagDisplay = <div>Technology Used: {this.props.name}</div>
-        // } else {
-        //     tagDisplay = <div></div>
-        // }
+        let tagDisplay;
+        if (this.props.tag_name) {
+            tagDisplay = <div>Technology Used: {this.props.tag_name}</div>
+        } else {
+            tagDisplay = <div></div>
+        }
         return (
             <div class="item">
                 <hr></hr>
@@ -75,7 +75,7 @@ class ProjectItem extends Component {
                 <div>{websiteDisplay}</div>
                 <div>{githubDisplay}</div>
                 <div>{dateDisplay}</div>
-                {/* <div>{tagDisplay}</div> */}
+                <div>{tagDisplay}</div>
             </div>
         );
     }
