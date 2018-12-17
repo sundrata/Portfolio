@@ -28,7 +28,7 @@ class ProjectItem extends Component {
         //thumbnail conditional
         let thumbnailDisplay;
         if(this.props.thumbnail){
-            thumbnailDisplay = <img alt ="website thumbnail"src={this.props.thumbnail} />
+            thumbnailDisplay = <img className="thumbPic" alt ="website thumbnail"src={this.props.thumbnail} />
         }else{
             thumbnailDisplay = <div></div>
             }
