@@ -11,7 +11,7 @@ class Admin extends Component {
         github: '',
         website: '',
         description: '',
-    } // end State
+    } 
 
     componentDidMount = () => {
         this.props.dispatch({type: 'FETCH_PROJECTS'})
@@ -24,42 +24,42 @@ class Admin extends Component {
             ...this.state,
             tag_id: event.target.value
         }) 
-    } // end changeTagState
+    } // end changeState
 
     changeNameState = (event) => {
         this.setState({
             ...this.state,
             name: event.target.value,
         })
-    } // end changeNameState
+    } // end changeState
 
     changeDateState = (event) => {
         this.setState({
             ...this.state,
             date_completed: event.target.value,
         }) 
-    } // end changeDateState
+    } // end changeState
 
     changeDescriptionState = (event) => {
         this.setState({
             ...this.state,
             description: event.target.value,
         }) 
-    }// end changeDescriptionState
+    }// end changeState
 
     changeGithubState = (event) => {
         this.setState({
             ...this.state,
             github: event.target.value,
         }) 
-    } // end changeGithubState
+    } // end changeState
 
     changeWebsiteState = (event) => {
         this.setState({
             ...this.state,
             website: event.target.value,
-        }) // 
-    } // end changeWebsiteState
+        }) 
+    } 
     //end changeState 
 
     //dispatches to index
