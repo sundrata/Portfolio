@@ -23,15 +23,30 @@
   background-color: cornflowerblue;
   margin: auto;
 }
-#nameDisplay{
+
+#adminForm{
+  height:auto; 
+  margin:0 auto; 
+
+}
+
+.item{
+  margin: auto 50px;
+  padding: auto; 
+}
+
+#addProject{
+  border:1px dashed cornflowerblue;
+  width:50%; 
+  margin:0 auto;
+}
+#techDisplay{
   margin: auto 50px;
   padding: auto;
   font-weight: bold;
 }
 #thumbnail{
   display: inline-block;
-  margin: auto 50px;
-  padding: auto;
   max-width: 200px;
   max-height: 200px;
 }

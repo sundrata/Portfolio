@@ -10,11 +10,11 @@ class ProjectItem extends Component {
         console.log('item props:', this.props)
 
         //name conditional
-        let nameDisplay;
+        let techDisplay;
         if (this.props.name) {
-            nameDisplay = <div>{this.props.name}</div>
+            techDisplay = <div>{this.props.name}</div>
         } else {
-            nameDisplay = <div></div>
+            techDisplay = <div></div>
         }
 
         //description conditional
@@ -59,17 +59,17 @@ class ProjectItem extends Component {
             dateDisplay = <div></div>
         }
 
-        // tag_id conditional
-        let tagDisplay;
-        if (this.props.name) {
-            tagDisplay = <div>Technology Used: {this.props.name}</div>
-        } else {
-            tagDisplay = <div></div>
-        }
+        // // tag_id conditional
+        // let tagDisplay;
+        // if (this.props.name) {
+        //     tagDisplay = <div>Technology Used: {this.props.name}</div>
+        // } else {
+        //     tagDisplay = <div></div>
+        // }
         return (
-            <div>
+            <div class="item">
                 <hr></hr>
-                <div id="nameDisplay">{nameDisplay}</div>
+                <div id="techDisplay">{techDisplay}</div>
                 <div id="thumbnail">{thumbnailDisplay}</div>
                 <div>{descriptionDisplay}</div>
                 <div>{websiteDisplay}</div>
