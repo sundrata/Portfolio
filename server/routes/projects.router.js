@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     // return all projects
     const queryText = `SELECT projects.*,
-    to_char("date_completed", 'dd/mm/YYYY') AS "date_completed",
+    to_char("date_completed", 'mm/dd/YYYY') AS "date_completed",
     tags.name AS tag_name
     FROM "projects" left JOIN "tags" ON "projects".tag_id = "tags".id;
     `;
