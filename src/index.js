@@ -28,12 +28,12 @@ const sagaMiddleware = createSagaMiddleware();
 function* fetchProjects(){
     const projectList = yield call(axios.get,'/projects');
     yield dispatch({ type : 'SET_PROJECTS', payload: projectList.data })
-}
+}//end fetchProjects
 
 function* fetchTags(){
     const tagList = yield call(axios.get, '/tags');
     yield dispatch({ type : 'SET_TAGS', payload: tagList.data})
-}
+}// end fetchTags
 
 function* deleteProjects(action) {
     try {

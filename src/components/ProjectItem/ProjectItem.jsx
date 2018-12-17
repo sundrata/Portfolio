@@ -59,13 +59,13 @@ class ProjectItem extends Component {
             dateDisplay = <div></div>
         }
 
-        //tag_id conditional
-        // let tagDisplay;
-        // if (this.props.tag_id) {
-        //     tagDisplay = <div>Technology Used: {this.props.tag_id}</div>
-        // } else {
-        //     tagDisplay = <div></div>
-        // }
+        // tag_id conditional
+        let tagDisplay;
+        if (this.props.name) {
+            tagDisplay = <div>Technology Used: {this.props.name}</div>
+        } else {
+            tagDisplay = <div></div>
+        }
         return (
             <div>
                 <hr></hr>
