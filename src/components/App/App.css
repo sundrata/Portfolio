@@ -10,8 +10,8 @@ background-color: lightcyan;
   color: white;
 }
 .thumbPic{
-  max-height: 300px;
-  max-width: 400px;
+  max-height: 400px;
+  max-width: 550px;
 }
 .App-title {
   font-size: 1.5em;
@@ -77,6 +77,8 @@ background-color: lightcyan;
 
 #me{
 float: right;
+height : 135px;
+width : 189px;
 }
 
 @keyframes App-logo-spin {
