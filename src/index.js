@@ -16,13 +16,15 @@ import createSagaMiddleware from 'redux-saga';
 function* rootSaga() {
 yield takeEvery('FETCH_PROJECTS', fetchProjects);
 yield takeEvery('FETCH_TAGS', fetchTags);
-yield takeEvery('DELETE_PROJECTS', deleteProjects)
+yield takeEvery('DELETE_PROJECTS', deleteProjects);
+yield takeEvery('POST_PROJECTS', postProjects)
 }
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
 //sagas
+
 function* fetchProjects(){
     const projectList = yield call(axios.get,'/projects');
     yield dispatch({ type : 'SET_PROJECTS', payload: projectList.data })
@@ -41,6 +43,15 @@ function* deleteProjects(action) {
         console.log(error);
     }
 } // end deleteProjects
+
+function* postProjects(action) {
+    try {
+        yield call(axios.post, '/projects', action.payload)
+        yield dispatch({type: 'FETCH_PROJECTS'})
+    } catch(error) {
+        console.log(error);
+    }
+} // end postProjects
 
 //end sagas
 
