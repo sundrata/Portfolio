@@ -50,7 +50,6 @@ class ProjectItem extends Component {
         } else {
             githubDisplay = <div></div>
         }
-
         //date_completed conditional
         let dateDisplay;
         if (this.props.date_completed) {
