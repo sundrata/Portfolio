@@ -106,7 +106,7 @@ class Admin extends Component {
                     <option value={6}>HTML</option>
                 </select><br></br>
                 <input onChange={this.changeGithubState} type="text" placeholder="Github URL"/><br></br>
-                <input onChange={this.changeWebsiteState} type="text" placeholder="Website URL(Optional)" /><br></br>
+                <input onChange={this.changeWebsiteState} type="text" placeholder="Website" /><br></br>
                 <textarea onChange={this.changeDescriptionState} type="text" placeholder="Description" /><br></br>
                 <input onClick={this.submitForm} type="submit"/>
             </form>
