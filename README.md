@@ -25,6 +25,11 @@ CREATE TABLE "projects" (
 
 INSERT INTO "tags" ("name") 
 VALUES ('React'), ('jQuery'), ('Node'), ('SQL'), ('Redux'), ('HTML');
+
+SELECT projects.*,
+to_char("date_completed", 'mm/dd/YYYY') AS "date_completed",
+tags.name AS tag_name
+FROM "projects" left JOIN "tags" ON "projects".tag_id = "tags".id;
 ```
 
 1. `npm install`
