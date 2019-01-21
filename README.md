@@ -1,6 +1,5 @@
 # React Redux with Sagas
 
-// DO NOT HIT DELETE ON ADMIN PAGE, DELETE HITS WRONG ROW
 ## Setup
 
 1. Create a database named `portfolio`
@@ -26,10 +25,6 @@ CREATE TABLE "projects" (
 INSERT INTO "tags" ("name") 
 VALUES ('React'), ('jQuery'), ('Node'), ('SQL'), ('Redux'), ('HTML');
 
-SELECT projects.*,
-to_char("date_completed", 'mm/dd/YYYY') AS "date_completed",
-tags.name AS tag_name
-FROM "projects" left JOIN "tags" ON "projects".tag_id = "tags".id;
 ```
 
 1. `npm install`
@@ -40,7 +35,7 @@ FROM "projects" left JOIN "tags" ON "projects".tag_id = "tags".id;
 
 ## Feature List
 
-For this project I created a basic portfolio for previous weekend challenges.
+For this project I created a portfolio website to showcase my weekend projects I made during tier two of Prime Academy..
 
 ### Project Page
 
@@ -55,12 +50,12 @@ For this project I created a basic portfolio for previous weekend challenges.
 - [x] Client side route that displays a form allowing you to add a new project to your portfolio
 - [x] Include a drop down menu with a list of tags
 - [x] Send data to the server and notify the user of success or failure
-- [ ] List projects by name and allow the user to delete them //NOT COMPLETE
+- [x] List projects by name and allow the user to delete them
 - [x] Include a button that navigates to the project page
 
 ### General Tasks
 
-- [ ] Commit your code frequently! You should have at 15+ commits on a project of this size. Use branches to help break down your features. //only 11
+- [x] Commit your code frequently! You should have at 15+ commits on a project of this size. Use branches to help break down your features. 
 - [x] Comment your code.
 - [x] Update this README to include a description of the project in your own words.
 
@@ -73,10 +68,3 @@ For this project I created a basic portfolio for previous weekend challenges.
 ### Admin Page
 
 <img src="https://github.com/PrimeAcademy/weekend-6-portfolio/raw/master/wireframes/admin_page.png" width="560">
-
-## Stretch Goals
-
-- [ ] Use the GitHub API to get user information to display at the top of the page
-- [ ] Improve styling on the page using Material UI
-- [ ] Include a form on the admin page for adding new tags
-- [ ] Implement additional features of the GitHub API
