@@ -1,5 +1,7 @@
 # React Redux with Sagas
 
+For this project I created a portfolio website to showcase my weekend projects I made during tier two of Prime Academy.
+
 ## Setup
 
 1. Create a database named `portfolio`
@@ -32,10 +34,6 @@ VALUES ('React'), ('jQuery'), ('Node'), ('SQL'), ('Redux'), ('HTML');
 1. `npm run client`
 
 ## Notes
-
-## Feature List
-
-For this project I created a portfolio website to showcase my weekend projects I made during tier two of Prime Academy..
 
 ### Project Page
 
